@@ -1,5 +1,5 @@
 /* =========================================================
-   THE OTHER SIDE — ESTILO MAESTRO (GOTHIC URBAN)
+   MAGIC LEGENDS 2.0 — OVERRIDE TOTAL (MODO OSCURO SOBRIO)
    ========================================================= */
 
 html, body {
@@ -20,123 +20,53 @@ html, body {
     box-sizing: border-box !important;
 }
 
-#main, #content, #page-body {
+#main, #content, #page-body, .main, .body {
     background: transparent !important;
 }
 
-.forumline, table.forumline, .tablebg, .row1, .row2, .row3, td.row1, td.row2, td.row3 {
+/* Forzar la desaparición de las tablas grises clásicas de Foroactivo */
+table.forumline, .forumline, .tablebg, tbody, tr {
     background: transparent !important;
     border: none !important;
 }
 
-th, .catHead, .catLeft, .catRight {
-    display: none !important;
-}
-
-.tos-board {
-    width: 100% !important;
-    box-sizing: border-box !important;
-    padding: 20px !important;
-}
-
-.tos-category {
-    width: 100% !important;
-    margin: 0 0 35px 0 !important;
-    box-sizing: border-box !important;
-}
-
-.tos-category-header {
-    width: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 14px !important;
-    margin: 0 0 18px 0 !important;
-}
-
-.tos-category-line {
-    height: 1px !important;
-    flex: 1 !important;
-    background: #302a2a !important;
-}
-
-.tos-category-title {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    flex-shrink: 0 !important;
-}
-
-.tos-category-title h2 {
-    margin: 0 !important;
-    color: #d8ccc1 !important;
-    font-size: 12px !important;
-    font-weight: normal !important;
-    letter-spacing: 3px !important;
-    text-transform: uppercase !important;
-}
-
-.tos-forum-grid {
-    width: 100% !important;
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 14px !important;
-    box-sizing: border-box !important;
-}
-
-.tos-forum-card {
-    display: flex !important;
-    flex-direction: column !important;
-    min-height: 145px !important;
-    padding: 18px 20px !important;
+/* Celdas de foros convertidas a tarjetas oscuras */
+td.row1, td.row2, td.row3, .row1, .row2, .row3 {
     background: #141313 !important;
     border: 1px solid #302a2a !important;
-    border-radius: 3px !important;
-    box-sizing: border-box !important;
-    transition: all 0.2s ease !important;
+    border-radius: 4px !important;
+    padding: 16px !important;
 }
 
-.tos-forum-card:hover {
+td.row1:hover, td.row2:hover {
     background: #181516 !important;
     border-color: #7b2929 !important;
-    transform: translateY(-1px) !important;
 }
 
-.tos-forum-title {
-    margin: 0 0 8px 0 !important;
-}
-
-.tos-forum-title h3 a {
+/* Cabeceras de categorías */
+th, .catHead, .catLeft, .catRight {
+    background: #161516 !important;
+    border: 1px solid #3b3030 !important;
     color: #e5ddd5 !important;
-    font-size: 15px !important;
-    font-weight: normal !important;
-    letter-spacing: 1.2px !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 12px !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    padding: 12px 15px !important;
+}
+
+/* Enlaces y tipografías */
+a, a.forumlink, .topictitle {
+    color: #e5ddd5 !important;
     text-decoration: none !important;
 }
 
-.tos-forum-title h3 a:hover {
+a:hover, a.forumlink:hover, .topictitle:hover {
     color: #e0b8b8 !important;
 }
 
-.tos-forum-description {
-    margin: 0 0 10px 0 !important;
+p.gensmall, .gensmall, span.gensmall {
     color: #9d9289 !important;
     font-family: Arial, sans-serif !important;
     font-size: 11px !important;
-    line-height: 1.5 !important;
-}
-
-.tos-forum-footer {
-    display: flex !important;
-    align-items: center !important;
-    gap: 15px !important;
-    margin-top: auto !important;
-    padding-top: 10px !important;
-    border-top: 1px solid #272222 !important;
-}
-
-@media (max-width: 700px) {
-    .tos-forum-grid {
-        grid-template-columns: 1fr !important;
-    }
 }
