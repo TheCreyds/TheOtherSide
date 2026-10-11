@@ -1,7 +1,8 @@
 /* =========================================================
-   MAGIC LEGENDS 2.0 — ESTILO MAESTRO (GOTHIC URBAN / DARK)
+   MAGIC LEGENDS 2.0 — ESTILO MAESTRO (DARK MODE / GOTHIC URBAN)
    ========================================================= */
 
+/* 1. RESET Y FONDO GENERAL */
 html, body {
     background: #0b0c0d !important;
     background-image: none !important;
@@ -24,7 +25,7 @@ html, body {
     background: transparent !important;
 }
 
-/* Ocultar elementos nativos antiguos de Foroactivo */
+/* 2. OCULTAR ELEMENTOS NATIVOS ANTIGUOS DE FOROACTIVO */
 .forumline, table.forumline, .tablebg, .row1, .row2, .row3, td.row1, td.row2, td.row3 {
     background: transparent !important;
     border: none !important;
@@ -34,7 +35,7 @@ th, .catHead, .catLeft, .catRight {
     display: none !important;
 }
 
-/* Tablero y Contenedores */
+/* 3. TABLERO Y CONTENEDORES */
 .tos-board {
     width: 100% !important;
     box-sizing: border-box !important;
@@ -79,7 +80,7 @@ th, .catHead, .catLeft, .catRight {
     text-transform: uppercase !important;
 }
 
-/* Cuadrícula de 2 columnas para los foros */
+/* 4. CUADRÍCULA DE 2 COLUMNAS PARA LOS FOROS */
 .tos-forum-grid {
     width: 100% !important;
     display: grid !important;
@@ -143,7 +144,7 @@ th, .catHead, .catLeft, .catRight {
     border-top: 1px solid #272222 !important;
 }
 
-/* Responsive */
+/* 5. RESPONSIVE */
 @media (max-width: 700px) {
     .tos-forum-grid {
         grid-template-columns: 1fr !important;
