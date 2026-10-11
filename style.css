@@ -1,8 +1,7 @@
 /* =========================================================
-   MAGIC LEGENDS 2.0 — ESTILO MAESTRO (DARK MODE / GOTHIC URBAN)
+   THE OTHER SIDE — ESTILO MAESTRO (GOTHIC URBAN)
    ========================================================= */
 
-/* 1. RESET Y FONDO GENERAL */
 html, body {
     background: #0b0c0d !important;
     background-image: none !important;
@@ -25,7 +24,6 @@ html, body {
     background: transparent !important;
 }
 
-/* 2. OCULTAR ELEMENTOS NATIVOS ANTIGUOS DE FOROACTIVO */
 .forumline, table.forumline, .tablebg, .row1, .row2, .row3, td.row1, td.row2, td.row3 {
     background: transparent !important;
     border: none !important;
@@ -35,7 +33,6 @@ th, .catHead, .catLeft, .catRight {
     display: none !important;
 }
 
-/* 3. TABLERO Y CONTENEDORES */
 .tos-board {
     width: 100% !important;
     box-sizing: border-box !important;
@@ -48,7 +45,6 @@ th, .catHead, .catLeft, .catRight {
     box-sizing: border-box !important;
 }
 
-/* Encabezado de categoría con líneas divisorias */
 .tos-category-header {
     width: 100% !important;
     display: flex !important;
@@ -80,7 +76,6 @@ th, .catHead, .catLeft, .catRight {
     text-transform: uppercase !important;
 }
 
-/* 4. CUADRÍCULA DE 2 COLUMNAS PARA LOS FOROS */
 .tos-forum-grid {
     width: 100% !important;
     display: grid !important;
@@ -89,7 +84,6 @@ th, .catHead, .catLeft, .catRight {
     box-sizing: border-box !important;
 }
 
-/* Tarjeta individual de foro */
 .tos-forum-card {
     display: flex !important;
     flex-direction: column !important;
@@ -108,7 +102,6 @@ th, .catHead, .catLeft, .catRight {
     transform: translateY(-1px) !important;
 }
 
-/* Títulos de los foros */
 .tos-forum-title {
     margin: 0 0 8px 0 !important;
 }
@@ -125,7 +118,6 @@ th, .catHead, .catLeft, .catRight {
     color: #e0b8b8 !important;
 }
 
-/* Descripciones */
 .tos-forum-description {
     margin: 0 0 10px 0 !important;
     color: #9d9289 !important;
@@ -134,7 +126,6 @@ th, .catHead, .catLeft, .catRight {
     line-height: 1.5 !important;
 }
 
-/* Pie de tarjeta */
 .tos-forum-footer {
     display: flex !important;
     align-items: center !important;
@@ -144,7 +135,6 @@ th, .catHead, .catLeft, .catRight {
     border-top: 1px solid #272222 !important;
 }
 
-/* 5. RESPONSIVE */
 @media (max-width: 700px) {
     .tos-forum-grid {
         grid-template-columns: 1fr !important;
