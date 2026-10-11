@@ -1,0 +1,151 @@
+/* =========================================================
+   MAGIC LEGENDS 2.0 — ESTILO MAESTRO (GOTHIC URBAN / DARK)
+   ========================================================= */
+
+html, body {
+    background: #0b0c0d !important;
+    background-image: none !important;
+    color: #d8ccc1 !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#wrap {
+    width: 1180px !important;
+    max-width: calc(100% - 40px) !important;
+    margin: 25px auto !important;
+    background: #111213 !important;
+    border: 1px solid #302a2a !important;
+    box-sizing: border-box !important;
+}
+
+#main, #content, #page-body {
+    background: transparent !important;
+}
+
+/* Ocultar elementos nativos antiguos de Foroactivo */
+.forumline, table.forumline, .tablebg, .row1, .row2, .row3, td.row1, td.row2, td.row3 {
+    background: transparent !important;
+    border: none !important;
+}
+
+th, .catHead, .catLeft, .catRight {
+    display: none !important;
+}
+
+/* Tablero y Contenedores */
+.tos-board {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 20px !important;
+}
+
+.tos-category {
+    width: 100% !important;
+    margin: 0 0 35px 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Encabezado de categoría con líneas divisorias */
+.tos-category-header {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin: 0 0 18px 0 !important;
+}
+
+.tos-category-line {
+    height: 1px !important;
+    flex: 1 !important;
+    background: #302a2a !important;
+}
+
+.tos-category-title {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    flex-shrink: 0 !important;
+}
+
+.tos-category-title h2 {
+    margin: 0 !important;
+    color: #d8ccc1 !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+}
+
+/* Cuadrícula de 2 columnas para los foros */
+.tos-forum-grid {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    box-sizing: border-box !important;
+}
+
+/* Tarjeta individual de foro */
+.tos-forum-card {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 145px !important;
+    padding: 18px 20px !important;
+    background: #141313 !important;
+    border: 1px solid #302a2a !important;
+    border-radius: 3px !important;
+    box-sizing: border-box !important;
+    transition: all 0.2s ease !important;
+}
+
+.tos-forum-card:hover {
+    background: #181516 !important;
+    border-color: #7b2929 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Títulos de los foros */
+.tos-forum-title {
+    margin: 0 0 8px 0 !important;
+}
+
+.tos-forum-title h3 a {
+    color: #e5ddd5 !important;
+    font-size: 15px !important;
+    font-weight: normal !important;
+    letter-spacing: 1.2px !important;
+    text-decoration: none !important;
+}
+
+.tos-forum-title h3 a:hover {
+    color: #e0b8b8 !important;
+}
+
+/* Descripciones */
+.tos-forum-description {
+    margin: 0 0 10px 0 !important;
+    color: #9d9289 !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+}
+
+/* Pie de tarjeta */
+.tos-forum-footer {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin-top: auto !important;
+    padding-top: 10px !important;
+    border-top: 1px solid #272222 !important;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .tos-forum-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
