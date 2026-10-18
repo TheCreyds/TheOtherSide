@@ -49,8 +49,24 @@ html[data-tos-theme="light"] {
   --shadow: 0 8px 25px rgba(3,3,3,.10);
 }
 
-html, body, #wrap, #page-body, #main, #content, #container {
-background-color: var(--bg-body) !important;
+html {
+  background-color: #050505 !important;
+  background-image: url("https://i.imgur.com/5Sn6oCZ.jpeg") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+body {
+  background: transparent !important;
+  color: var(--text-main) !important;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+#wrap, #page-body, #main, #content, #container {
+  background-color: rgba(3, 3, 3, 0.48) !important;
+  background-image: none !important;
   color: var(--text-main) !important;
   font-family: "Segoe UI", system-ui, sans-serif;
 }
