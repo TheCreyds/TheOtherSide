@@ -50,7 +50,7 @@ html[data-tos-theme="light"] {
 }
 
 html, body, #wrap, #page-body, #main, #content, #container {
-  background: var(--bg-body) !important;
+background-color: var(--bg-body) !important;
   color: var(--text-main) !important;
   font-family: "Segoe UI", system-ui, sans-serif;
 }
