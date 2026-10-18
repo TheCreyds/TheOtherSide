@@ -1,0 +1,627 @@
+/* Extraído del CSS original, manteniendo el orden de cascada. */
+/* ========================================
+   THE OTHER SIDE — DASHBOARD
+   ======================================== */
+
+#tos-dashboard {
+  --tos-bg: #151515;
+  --tos-panel: #242424;
+  --tos-inner: #191919;
+  --tos-border: #54252f;
+  --tos-accent: #c6a3aa;
+  --tos-text: #d0d0d0;
+  --tos-muted: #929292;
+
+  display: grid;
+  gap: 14px;
+  width: 100%;
+  margin: 18px 0;
+  color: var(--tos-text);
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+#tos-dashboard *,
+#tos-dashboard *::before,
+#tos-dashboard *::after {
+  box-sizing: border-box;
+}
+
+#tos-dashboard .tos-top-grid {
+  display: grid;
+  grid-template-columns: minmax(210px, .9fr)
+                         minmax(380px, 1.5fr)
+                         minmax(350px, 1.2fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+#tos-dashboard .tos-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(230px, .9fr)
+                         minmax(260px, 1fr)
+                         minmax(190px, .65fr);
+  gap: 12px;
+  align-items: start;
+}
+
+#tos-dashboard .tos-panel {
+  min-width: 0;
+  padding: 9px;
+  background: var(--tos-panel);
+  border: 1px solid #2c2c2c;
+  box-shadow: inset 0 0 0 1px #1a1a1a;
+}
+
+#tos-dashboard .tos-panel-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+  margin-bottom: 10px;
+  padding: 10px 8px;
+  background: var(--tos-inner);
+  color: var(--tos-accent);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #30272a;
+}
+
+/* FECHA Y AMBIENTACIÓN */
+
+#tos-dashboard .tos-date {
+  display: flex;
+  flex-direction: column;
+  min-height: 210px;
+}
+
+#tos-dashboard .tos-date-image {
+  display: flex;
+  flex: 1;
+  min-height: 145px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 8px;
+  background:
+    linear-gradient(#1119, #111b),
+    url("https://placehold.co/700x400/171717/9c777e?text=THE+OTHER+SIDE")
+    center/cover no-repeat;
+}
+
+#tos-dashboard .tos-date-number {
+  color: #d1b7bb;
+  font-family: Georgia, serif;
+  font-size: clamp(26px, 3vw, 46px);
+  text-align: center;
+}
+
+#tos-dashboard .tos-date-location {
+  margin-top: 5px;
+  color: #aaa;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+#tos-dashboard .tos-description {
+  height: 55px;
+  margin-top: 8px;
+  color: var(--tos-muted);
+  font-size: 12px;
+}
+
+/* AVISOS */
+
+#tos-dashboard .tos-notices {
+  min-height: 210px;
+}
+
+#tos-dashboard .tos-notice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+#tos-dashboard .tos-notice {
+  min-width: 0;
+  padding: 7px;
+  background: var(--tos-inner);
+  border: 1px solid #30272a;
+}
+
+#tos-dashboard .tos-notice img {
+  display: block;
+  width: 100%;
+  height: 72px;
+  object-fit: cover;
+}
+
+#tos-dashboard .tos-notice h3 {
+  margin: 10px 0 6px;
+  color: var(--tos-accent);
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+#tos-dashboard .tos-notice .tos-auto-window {
+  height: 90px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ÚLTIMOS TEMAS */
+
+#tos-dashboard .tos-latest {
+  min-height: 380px;
+}
+
+#tos-dashboard .tos-latest-window {
+  height: 325px;
+}
+
+#tos-dashboard .tos-topic {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 12px;
+  min-height: 100px;
+  padding: 9px 4px;
+  background: var(--tos-inner);
+  border-bottom: 1px solid #30272a;
+}
+
+#tos-dashboard .tos-topic img {
+  width: 76px;
+  height: 88px;
+  object-fit: cover;
+  background: #21191b;
+}
+
+#tos-dashboard .tos-topic-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+#tos-dashboard .tos-topic-info a {
+  color: #ddd;
+  font-size: 14px;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+#tos-dashboard .tos-topic-info a:hover {
+  color: var(--tos-accent);
+}
+
+#tos-dashboard .tos-topic-info span {
+  color: var(--tos-muted);
+  font-size: 10px;
+}
+
+/* ACCESOS RÁPIDOS */
+
+#tos-dashboard .tos-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+}
+
+#tos-dashboard .tos-shortcuts a {
+  display: flex;
+  min-height: 43px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  background: var(--tos-inner);
+  color: #b8a5a8;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #30272a;
+}
+
+#tos-dashboard .tos-shortcuts a:hover {
+  color: #eee;
+  border-color: var(--tos-border);
+}
+
+/* STAFF COMPACTO */
+
+#tos-dashboard .tos-staff-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+}
+
+#tos-dashboard .tos-staff-member {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  background: var(--tos-inner);
+  color: var(--tos-text);
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #30272a;
+}
+
+#tos-dashboard .tos-staff-member img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+}
+
+#tos-dashboard .tos-staff-member span {
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+/* TOP POSTER COMPACTO */
+
+#tos-dashboard .tos-poster-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+#tos-dashboard .tos-poster {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 3px;
+  background: var(--tos-inner);
+  color: var(--tos-accent);
+  text-decoration: none;
+  border: 1px solid #30272a;
+}
+
+#tos-dashboard .tos-poster b {
+  font-size: 15px;
+}
+
+#tos-dashboard .tos-poster img {
+  display: block;
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+}
+
+#tos-dashboard .tos-poster span {
+  font-size: 8px;
+  text-align: center;
+}
+
+/* VENTANAS DE ANIMACIÓN: SIN BARRAS */
+
+#tos-dashboard .tos-auto-window {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+}
+
+#tos-dashboard .tos-auto-track {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  animation: tos-scroll-up 24s linear infinite;
+  will-change: transform;
+}
+
+#tos-dashboard .tos-auto-track p {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 7px;
+}
+
+#tos-dashboard .tos-auto-window:hover .tos-auto-track {
+  animation-play-state: paused;
+}
+
+#tos-dashboard .tos-description .tos-auto-track {
+  animation-duration: 30s;
+}
+
+#tos-dashboard .tos-notice:nth-child(2) .tos-auto-track {
+  animation-duration: 28s;
+}
+
+#tos-dashboard .tos-notice:nth-child(3) .tos-auto-track {
+  animation-duration: 32s;
+}
+
+#tos-dashboard .tos-latest-track {
+  animation-duration: 32s;
+}
+
+@keyframes tos-scroll-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+  #tos-dashboard .tos-auto-track {
+    animation: none;
+    transform: none;
+  }
+}
+
+/* TABLET Y MÓVIL */
+
+@media (max-width: 1050px) {
+  #tos-dashboard .tos-top-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  }
+
+  #tos-dashboard .tos-latest {
+    grid-column: 1 / -1;
+  }
+
+  #tos-dashboard .tos-bottom-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  #tos-dashboard .tos-shortcuts {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 650px) {
+  #tos-dashboard .tos-top-grid,
+  #tos-dashboard .tos-bottom-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #tos-dashboard .tos-latest,
+  #tos-dashboard .tos-shortcuts {
+    grid-column: auto;
+  }
+
+  #tos-dashboard .tos-notice img {
+    height: 55px;
+  }
+
+  #tos-dashboard .tos-notice .tos-auto-window {
+    height: 100px;
+  }
+
+  #tos-dashboard .tos-staff-member img {
+    height: 105px;
+  }
+}
+
+/* =========================================
+   THE OTHER SIDE — CORRECCIÓN DE DIMENSIONES
+   ========================================= */
+
+#tos-dashboard {
+  display: block !important;
+  width: min(1200px, calc(100vw - 40px)) !important;
+  max-width: 1200px !important;
+  margin: 22px auto !important;
+  position: relative;
+  left: auto;
+  transform: none;
+}
+
+#tos-dashboard .tos-top-grid {
+  display: grid !important;
+  grid-template-columns: minmax(190px, 0.85fr) minmax(390px, 1.5fr) minmax(300px, 1.2fr) !important;
+  gap: 10px !important;
+  align-items: stretch;
+}
+
+#tos-dashboard .tos-bottom-grid {
+  display: grid !important;
+  grid-template-columns: minmax(250px, 1fr) minmax(390px, 1.15fr) minmax(250px, 0.75fr) !important;
+  gap: 10px !important;
+  align-items: start;
+}
+
+#tos-dashboard .tos-date,
+#tos-dashboard .tos-notices,
+#tos-dashboard .tos-latest {
+  height: 280px !important;
+  min-height: 280px !important;
+  overflow: hidden !important;
+}
+
+#tos-dashboard .tos-date-image {
+  min-height: 0 !important;
+}
+
+#tos-dashboard .tos-notice-grid {
+  min-height: 0 !important;
+  height: 215px !important;
+}
+
+#tos-dashboard .tos-auto-window {
+  min-height: 0 !important;
+  height: 165px !important;
+  overflow: hidden !important;
+}
+
+#tos-dashboard .tos-latest-window {
+  height: 215px !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+#tos-dashboard .tos-staff,
+#tos-dashboard .tos-top-poster,
+#tos-dashboard .tos-shortcuts {
+  min-height: 0 !important;
+  height: 190px !important;
+  overflow: hidden;
+}
+
+#tos-dashboard .tos-staff-member img,
+#tos-dashboard .tos-poster img {
+  height: 90px !important;
+  object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+  #tos-dashboard .tos-top-grid,
+  #tos-dashboard .tos-bottom-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  #tos-dashboard .tos-date,
+  #tos-dashboard .tos-notices,
+  #tos-dashboard .tos-latest {
+    height: 280px !important;
+  }
+
+  #tos-dashboard .tos-staff,
+  #tos-dashboard .tos-top-poster,
+  #tos-dashboard .tos-shortcuts {
+    height: auto !important;
+  }
+}
+
+/* ==========================================
+   THE OTHER SIDE — AVISOS CON SCROLL MANUAL
+   ========================================== */
+
+/* Cada columna de avisos */
+#tos-dashboard .tos-notice-grid > *,
+#tos-dashboard .tos-notice-grid .tos-notice {
+  min-height: 0 !important;
+}
+
+/* Área interior desplazable */
+#tos-dashboard .tos-auto-window {
+  height: 165px !important;
+  max-height: 165px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  scrollbar-width: thin;
+  scrollbar-color: #792637 #211b1e;
+  scroll-behavior: smooth;
+}
+
+/* Barra de desplazamiento en Chrome y navegadores similares */
+#tos-dashboard .tos-auto-window::-webkit-scrollbar {
+  width: 6px;
+}
+
+#tos-dashboard .tos-auto-window::-webkit-scrollbar-track {
+  background: #211b1e;
+}
+
+#tos-dashboard .tos-auto-window::-webkit-scrollbar-thumb {
+  background: #792637;
+  border-radius: 6px;
+}
+
+#tos-dashboard .tos-auto-window::-webkit-scrollbar-thumb:hover {
+  background: #a33a50;
+}
+
+/* ANUNCIOS, EVENTOS Y NOVEDADES: SCROLL MANUAL */
+#tos-dashboard .tos-auto-window {
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  scroll-behavior: auto !important;
+  overscroll-behavior: contain;
+}
+
+#tos-dashboard .tos-auto-window:hover {
+  scroll-behavior: auto !important;
+}
+
+
+/* ==========================================
+   THE OTHER SIDE — SCROLL SELECTIVO
+   ========================================== */
+
+/* Solo ANUNCIOS, EVENTOS y NOVEDADES */
+#tos-dashboard .tos-notice .tos-auto-window {
+  height: 165px !important;
+  max-height: 165px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  scroll-behavior: auto !important;
+  scrollbar-width: thin;
+  scrollbar-color: #792637 #211b1e;
+}
+
+#tos-dashboard .tos-notice .tos-auto-track {
+  display: block !important;
+  position: static !important;
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+  height: auto !important;
+}
+
+#tos-dashboard .tos-notice .tos-auto-window::-webkit-scrollbar {
+  width: 6px;
+}
+
+#tos-dashboard .tos-notice .tos-auto-window::-webkit-scrollbar-track {
+  background: #211b1e;
+}
+
+#tos-dashboard .tos-notice .tos-auto-window::-webkit-scrollbar-thumb {
+  background: #792637;
+  border-radius: 6px;
+}
+
+/* REPARACIÓN VISUAL — THE OTHER SIDE
+   Pegar al FINAL del CSS actual. No reemplazar todo el CSS. */
+
+/* Imagen de fondo del cuadro de fecha: reemplaza la marca de agua anterior */
+#tos-dashboard .tos-date-image {
+  background-image: linear-gradient(rgba(10,9,10,.28), rgba(10,9,10,.38)), url("URL_DIRECTA_DE_TU_IMAGEN") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Reloj: aproximadamente el triple del tamaño original */
+#tos-dashboard .tos-clock {
+  margin-top: 12px !important;
+  font-size: 30px !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+  font-weight: 600 !important;
+  color: #f1e8eb !important;
+  text-shadow: 0 2px 8px #000 !important;
+}
+
+/* Ocultar ubicación y etiqueta sin alterar el diseño */
+#tos-dashboard .tos-date-location,
+#tos-dashboard .tos-clock-label {
+  display: none !important;
+}
+
+/* Avisos con barra manual, sin animación automática */
+#tos-dashboard .tos-notice-scroll {
+  flex: 1 1 auto;
+  min-height: 135px;
+  max-height: 220px;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  scrollbar-width: thin;
+  scrollbar-color: #792637 #211b1e;
+}
+#tos-dashboard .tos-notice-scroll::-webkit-scrollbar { width: 6px; }
+#tos-dashboard .tos-notice-scroll::-webkit-scrollbar-track { background: #211b1e; }
+#tos-dashboard .tos-notice-scroll::-webkit-scrollbar-thumb { background: #792637; border-radius: 4px; }
+#tos-dashboard .tos-notice-scroll,
+#tos-dashboard .tos-notice-scroll * {
+  animation: none !important;
+  transform: none !important;
+}

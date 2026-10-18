@@ -1,0 +1,401 @@
+/* Extraído del CSS original, manteniendo el orden de cascada. */
+/* 4. Barra de usuario personalizada */
+#tos-userbar {
+  position: relative;
+  z-index: 999;
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+  width: 100%;
+  max-width: none;
+  min-height: 60px;
+  margin: 14px auto 26px;
+  padding: 7px;
+  box-sizing: border-box;
+  background: #171517 !important;
+  border: 1px solid #492129 !important;
+  color: #e8e0dc;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+#tos-userbar .tos-userbar-inner {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+  max-width: 1280px;
+  min-height: 46px;
+  margin: 0 auto;
+  padding: 7px;
+  box-sizing: border-box;
+  background: #242426;
+  border: 1px solid #29292c;
+}
+
+#tos-userbar .tos-userbar-home {
+  display: flex;
+  flex: 0 0 42px;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  min-width: 42px;
+  background: #201c1e !important;
+  border: 1px solid #30272b !important;
+  color: #c9b9b4 !important;
+  font-size: 20px;
+  text-decoration: none !important;
+}
+
+#tos-userbar .tos-userbar-welcome {
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  padding: 0 14px;
+  box-sizing: border-box;
+  background: #201c1e !important;
+  border: 1px solid #30272b !important;
+  color: #c9b9b4;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+#tos-userbar .tos-userbar-label { color: #a39793 !important; }
+#tos-userbar .tos-userbar-welcome strong {
+  color: #e7d9d2 !important;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#tos-userbar .tos-userbar-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: stretch;
+  gap: 5px;
+}
+
+#tos-userbar .tos-userbar-actions a {
+  display: flex;
+  flex: 0 0 43px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 43px;
+  min-width: 43px;
+  min-height: 44px;
+  padding: 4px 2px;
+  box-sizing: border-box;
+  background: #201c1e !important;
+  border: 1px solid #30272b !important;
+  border-radius: 0 !important;
+  color: #c9b9b4 !important;
+  font-size: 17px;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+#tos-userbar .tos-userbar-actions a small,
+#tos-userbar .tos-userbar-actions a .tos-userbar-text {
+  display: block;
+  max-width: 100%;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 7px;
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+#tos-userbar a, #tos-userbar a:visited {
+  color: #c9b9b4 !important;
+  text-decoration: none !important;
+}
+
+#tos-userbar .tos-userbar-home:hover,
+#tos-userbar .tos-userbar-actions a:hover {
+  background: #35171f !important;
+  border-color: #792637 !important;
+  color: #f0deda !important;
+}
+
+html[data-tos-theme="light"] #tos-userbar {
+  background: #f1e9e7 !important;
+  border-color: #d8bfc4 !important;
+}
+html[data-tos-theme="light"] #tos-userbar .tos-userbar-inner {
+  background: #ded5d3;
+  border-color: #d8bfc4;
+}
+html[data-tos-theme="light"] #tos-userbar .tos-userbar-home,
+html[data-tos-theme="light"] #tos-userbar .tos-userbar-welcome,
+html[data-tos-theme="light"] #tos-userbar .tos-userbar-actions a {
+  background: #fffaf8 !important;
+  border-color: #e5d8d9 !important;
+  color: #493238 !important;
+}
+
+/* 5. Ocultar toolbar nativa de Foroactivo (se conserva porque forma
+   parte de la configuración actual del foro) */
+#fa_toolbar, #fa_toolbar_hidden, #fa_toolbar #fa_right, #fa_toolbar #fa_left {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
+
+/* 6. Switcheroo — barra lateral borgoña; cada tarjeta representa una cuenta vinculada */
+#switcheroo.switcheroo {
+  position: fixed !important;
+  top: 50% !important;
+  bottom: auto !important;
+  left: 8px !important;
+  right: auto !important;
+  transform: translateY(-50%);
+  z-index: 10020 !important;
+  width: 68px !important;
+  max-height: 86vh !important;
+  overflow: visible !important;
+  box-sizing: border-box;
+  background: rgba(19,17,18,.93) !important;
+  color: #e8dfe0 !important;
+  border: 1px solid #54212d !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.45);
+  font-family: "Segoe UI", Arial, sans-serif !important;
+}
+
+#switcheroo .switcheroo__squircles {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 7px !important;
+  max-height: 84vh !important;
+  overflow-y: auto !important;
+  overflow-x: visible !important;
+  margin: 0 !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+  list-style: none !important;
+  scrollbar-width: thin;
+  scrollbar-color: #792637 #171416;
+}
+
+#switcheroo .switcheroo__squircles::-webkit-scrollbar { width: 4px; }
+#switcheroo .switcheroo__squircles::-webkit-scrollbar-thumb { background: #792637; border-radius: 5px; }
+#switcheroo .switcheroo__squircles::-webkit-scrollbar-track { background: #171416; }
+
+#switcheroo .switcheroo__squircle {
+  position: relative !important;
+  display: grid !important;
+  place-items: center !important;
+  flex: 0 0 44px !important;
+  width: 44px !important;
+  height: 44px !important;
+  box-sizing: border-box !important;
+  background: #211b1e !important;
+  border: 1px solid #39262d !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: border-color .18s ease, background .18s ease, transform .18s ease, box-shadow .18s ease !important;
+}
+
+#switcheroo .switcheroo__squircle:hover {
+  background: #351b23 !important;
+  border-color: #a13a50 !important;
+  transform: translateX(2px);
+}
+
+#switcheroo .switcheroo__avatar,
+#switcheroo .switcheroo__avatar img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 7px !important;
+  overflow: hidden !important;
+}
+
+#switcheroo .switcheroo__squircle.active,
+#switcheroo .switcheroo__squircle.switcheroo__squircles--active {
+  border: 2px solid #b64a60 !important;
+  box-shadow: 0 0 0 2px rgba(121,38,55,.25) !important;
+}
+
+#switcheroo .switcheroo__squircle::before { display: none !important; }
+
+#switcheroo .switcheroo__delete {
+  top: -5px !important;
+  right: -5px !important;
+  width: 16px !important;
+  height: 16px !important;
+  background: #9b2e43 !important;
+  color: #fff !important;
+  border: 1px solid #171416 !important;
+  z-index: 3 !important;
+}
+
+#switcheroo .switcheroo__squircle--button,
+#switcheroo [data-action="open-login"] {
+  position: relative !important;
+  display: grid !important;
+  place-items: center !important;
+  flex: 0 0 44px !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  max-width: 44px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  color: transparent !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  white-space: nowrap !important;
+  background: #211b1e !important;
+  border-color: #792637 !important;
+}
+
+#switcheroo .switcheroo__squircle--button > *,
+#switcheroo [data-action="open-login"] > * {
+  display: none !important;
+}
+
+#switcheroo .switcheroo__squircle--button::after,
+#switcheroo [data-action="open-login"]::after {
+  content: "+" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  color: #d9b6bc !important;
+  font: 25px Arial, sans-serif !important;
+}
+
+#switcheroo .switcheroo__squircle--button:hover::after { color: #fff !important; }
+
+
+#switcheroo .switcheroo__popper {
+  left: calc(100% + 10px) !important;
+  top: 50% !important;
+  max-width: 200px !important;
+  padding: 8px 10px !important;
+  background: #171416 !important;
+  color: #e8dfe0 !important;
+  border: 1px solid #792637 !important;
+  border-radius: 5px !important;
+  box-shadow: 0 7px 22px rgba(0,0,0,.45) !important;
+  font: 11px/1.4 Arial, sans-serif !important;
+  z-index: 10030 !important;
+}
+#switcheroo .switcheroo__popper::before { background: #171416 !important; }
+#switcheroo .switcheroo__divider {
+  width: 28px !important;
+  height: 1px !important;
+  margin: 1px auto !important;
+  background: #54212d !important;
+}
+
+/* Ventana de vinculación de cuentas */
+.monomer-overlay {
+  background: rgba(5,4,5,.78) !important;
+  backdrop-filter: blur(3px);
+  z-index: 10040 !important;
+}
+.monomer-modal {
+  max-width: 440px !important;
+  background: #171416 !important;
+  color: #e8dfe0 !important;
+  border: 1px solid #792637 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 16px 45px rgba(0,0,0,.65) !important;
+  z-index: 10041 !important;
+  font-family: "Segoe UI", Arial, sans-serif !important;
+}
+.monomer-modal .switcheroo__form {
+  padding: 22px !important;
+  background: transparent !important;
+  color: #e8dfe0 !important;
+}
+.monomer-modal .switcheroo__form-label {
+  color: #d6a4ad !important;
+  font-size: 10px !important;
+  letter-spacing: 1px !important;
+}
+.monomer-modal .switcheroo__form-input {
+  background: #211b1e !important;
+  color: #f1e8e9 !important;
+  border: 1px solid #54212d !important;
+}
+.monomer-modal .switcheroo__form-button {
+  background: #351b23 !important;
+  color: #f1e8e9 !important;
+  border: 1px solid #792637 !important;
+}
+.monomer-close { background: #8f263b !important; }
+
+/* 7. Responsive */
+@media (max-width: 700px) {
+  #wrap { width: 96% !important; }
+  .tos-board .tos-forum-grid { grid-template-columns: minmax(0, 1fr); }
+  .tos-board .tos-forum-main { grid-template-columns: minmax(0, 1fr); row-gap: 10px; }
+  .tos-board .tos-subforums { grid-column: 1; grid-row: auto; margin-top: 12px; }
+  .tos-board .tos-forum-intro .tos-forum-cover { height: 120px; }
+  .tos-board .tos-category-heading { grid-column: 1; gap: 8px; }
+  .tos-board .tos-category-heading h2,
+  .tos-board .tos-category-heading h2 a,
+  .tos-board .tos-category-title h2 { font-size: 18px !important; }
+  .tos-board .tos-forum-title,
+  .tos-board .tos-forum-title h3,
+  .tos-board .tos-forum-title h3 a,
+  .tos-board .tos-forum-title a { font-size: 21px !important; }
+  .tos-board .tos-forum-card .tos-forum-links a,
+  .tos-board .tos-forum-card .tos-subforums a { font-size: 14px !important; }
+  #tos-userbar { gap: 4px; padding: 5px; min-height: 48px; }
+  #tos-userbar .tos-userbar-home {
+    flex-basis: 34px; width: 34px; min-width: 34px; font-size: 17px;
+  }
+  #tos-userbar .tos-userbar-welcome {
+    padding: 0 7px; font-size: 9px; letter-spacing: .5px;
+  }
+  #tos-userbar .tos-userbar-actions { gap: 3px; }
+  #tos-userbar .tos-userbar-actions a {
+    flex-basis: 34px; width: 34px; min-width: 34px; min-height: 36px; font-size: 15px;
+  }
+  #tos-userbar .tos-userbar-actions a small,
+  #tos-userbar .tos-userbar-actions a .tos-userbar-text { font-size: 6px; }
+}
+
+@media (max-width: 600px) {
+  .tos-board .tos-forum-description img:first-child {
+    width: 90px; height: 72px; margin-right: 9px;
+  }
+  .tos-index-links, .tos-index-footer-links { gap: 10px; padding: 12px; }
+  #switcheroo.switcheroo {
+    left: 3px !important;
+    width: 60px !important;
+    max-height: 78vh !important;
+  }
+  #switcheroo .switcheroo__squircles {
+    gap: 6px !important; padding: 6px !important; max-height: 76vh !important;
+  }
+  #switcheroo .switcheroo__squircle {
+    flex-basis: 40px !important; width: 40px !important; height: 40px !important;
+  }
+  #switcheroo .switcheroo__squircle--button,
+  #switcheroo [data-action="open-login"] {
+    flex-basis: 40px !important; width: 40px !important; min-width: 40px !important;
+    max-width: 40px !important; height: 40px !important; min-height: 40px !important;
+    max-height: 40px !important;
+  }
+}

@@ -1,0 +1,441 @@
+/* Extraído del CSS original, manteniendo el orden de cascada. */
+/* THE OTHER SIDE — ELIMINAR MARCO DUPLICADO DEL CHATBOX */
+
+/* Quitar el contenedor exterior decorativo */
+.tos-chatbox-panel {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Ocultar el título exterior repetido */
+.tos-chatbox-panel > h2,
+.tos-chatbox-panel > h3,
+.tos-chatbox-panel .tos-chatbox-title {
+  display: none !important;
+}
+
+
+/* THE OTHER SIDE — RAZAS EN UNA SOLA FILA */
+
+.tos-races-grid {
+  display: grid !important;
+  grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+}
+
+.tos-races {
+  padding: 16px !important;
+}
+
+.tos-races-heading {
+  margin-bottom: 16px !important;
+}
+
+.tos-race {
+  min-width: 0 !important;
+  min-height: 112px !important;
+  padding: 12px 4px 10px !important;
+  gap: 8px !important;
+}
+
+.tos-race img {
+  width: 34px !important;
+  height: 34px !important;
+  object-fit: contain !important;
+}
+
+.tos-race > span {
+  font-size: 9px !important;
+  letter-spacing: 1px !important;
+  line-height: 1.4 !important;
+  overflow-wrap: anywhere !important;
+}
+
+.tos-race > i {
+  width: 55% !important;
+  max-width: 60px !important;
+}
+
+/* Pantallas medianas: cuatro por fila */
+@media (max-width: 900px) {
+  .tos-races-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Móviles: dos por fila */
+@media (max-width: 480px) {
+  .tos-races-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .tos-race {
+    min-height: 105px !important;
+  }
+
+  .tos-race img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
+
+/* THE OTHER SIDE — ANCHO GENERAL DEL FORO */
+#wrap {
+    width: 96% !important;
+    max-width: 1600px !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+}
+
+#page-body,
+#content-container,
+#main-content,
+#content,
+#main {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* THE OTHER SIDE — Tamaño de la descripción */
+#logo-desc p,
+#site-description {
+    font-size: 25px !important;
+    line-height: 1.5 !important;
+}
+
+
+/* THE OTHER SIDE — TARJETAS CON IMÁGENES GRANDES */
+
+/* Evitar que el contenido se distribuya dejando huecos */
+.tos-board .tos-forum-card {
+    justify-content: flex-start !important;
+    height: auto !important;
+    padding: 16px !important;
+}
+
+/* Quitar la limitación de tamaño de las imágenes descriptivas */
+.tos-board .tos-forum-description img:first-child {
+    float: left !important;
+    width: 46% !important;
+    max-width: 46% !important;
+    height: 170px !important;
+    margin: 0 14px 10px 0 !important;
+    object-fit: cover !important;
+    border-radius: 4px;
+}
+
+/* Aprovechar mejor el espacio de la descripción */
+.tos-board .tos-forum-description {
+    display: flow-root !important;
+    min-width: 0 !important;
+    line-height: 1.6 !important;
+}
+
+/* Reducir separaciones innecesarias */
+.tos-board .tos-forum-title {
+    min-height: 0 !important;
+    margin: 0 0 12px !important;
+    padding: 0 !important;
+}
+
+.tos-board .tos-forum-main {
+    row-gap: 8px !important;
+}
+
+.tos-board .tos-forum-card .tos-forum-links,
+.tos-board .tos-forum-card .tos-subforums {
+    margin-top: 10px !important;
+    gap: 6px !important;
+}
+
+/* Evitar huecos grandes antes de las estadísticas */
+.tos-board .tos-forum-footer {
+    margin-top: 12px !important;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 700px) {
+    .tos-board .tos-forum-description img:first-child {
+        width: 42% !important;
+        max-width: 42% !important;
+        height: 145px !important;
+    }
+}
+
+/* THE OTHER SIDE — TARJETAS COMPACTAS E IMÁGENES GRANDES */
+
+/* Evitar que las tarjetas se estiren innecesariamente */
+.tos-board .tos-forum-card {
+    justify-content: flex-start !important;
+    align-self: start !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 14px !important;
+    gap: 0 !important;
+}
+
+/* Quitar espacios verticales excesivos */
+.tos-board .tos-forum-title {
+    min-height: 0 !important;
+    margin: 0 0 12px !important;
+    padding: 0 !important;
+}
+
+.tos-board .tos-forum-main {
+    row-gap: 8px !important;
+}
+
+/* Imagen al 90 % del ancho de la tarjeta */
+.tos-board .tos-forum-description img:first-child {
+    display: block !important;
+    float: none !important;
+    width: 90% !important;
+    max-width: 90% !important;
+    height: 160px !important;
+    margin: 0 auto 12px !important;
+    object-fit: cover !important;
+    border-radius: 4px !important;
+}
+
+/* Ordenar la descripción debajo de la imagen */
+.tos-board .tos-forum-description {
+    display: flow-root !important;
+    min-width: 0 !important;
+    line-height: 1.5 !important;
+}
+
+/* Enlaces de subforos más próximos al contenido */
+.tos-board .tos-forum-card .tos-forum-links,
+.tos-board .tos-forum-card .tos-subforums {
+    margin-top: 8px !important;
+    gap: 6px !important;
+}
+
+/* Acercar las estadísticas al contenido */
+.tos-board .tos-forum-footer {
+    margin-top: 10px !important;
+    padding-top: 8px !important;
+}
+
+/* Evitar que la cuadrícula estire las tarjetas */
+.tos-board .tos-forum-grid {
+    align-items: start !important;
+}
+
+/* Móviles */
+@media (max-width: 700px) {
+    .tos-board .tos-forum-description img:first-child {
+        width: 90% !important;
+        max-width: 90% !important;
+        height: 145px !important;
+    }
+}
+
+/* THE OTHER SIDE — BOTONES DE TEMA Y SWITCHEROO */
+
+#tos-userbar .tos-userbar-actions button#tos-theme-toggle,
+#tos-userbar .tos-userbar-actions button#tos-switcheroo-toggle {
+  flex: 0 0 54px;
+  min-width: 54px;
+  min-height: 42px;
+  padding: 4px 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  box-sizing: border-box;
+  background: #201c1e;
+  border: 1px solid #492129;
+  color: #c9b9b4;
+  cursor: pointer;
+  font: inherit;
+  transition: background .2s, color .2s, border-color .2s;
+}
+
+#tos-userbar .tos-userbar-actions button#tos-theme-toggle span,
+#tos-userbar .tos-userbar-actions button#tos-switcheroo-toggle span {
+  font-size: 17px;
+  line-height: 1;
+}
+
+#tos-userbar .tos-userbar-actions button#tos-theme-toggle small,
+#tos-userbar .tos-userbar-actions button#tos-switcheroo-toggle small {
+  font-size: 8px;
+  line-height: 1.1;
+  letter-spacing: .4px;
+}
+
+#tos-userbar .tos-userbar-actions button#tos-theme-toggle:hover,
+#tos-userbar .tos-userbar-actions button#tos-switcheroo-toggle:hover,
+#tos-userbar .tos-userbar-actions button#tos-switcheroo-toggle[aria-expanded="false"] {
+  color: #f0deda;
+  background: #35171f;
+  border-color: #a43a49;
+}
+
+/* Ocultar Switcheroo sin destruir sus cuentas */
+html.tos-switcheroo-hidden #switcheroo {
+  display: none !important;
+}
+
+@media (max-width: 850px) {
+  #tos-userbar .tos-userbar-actions button#tos-theme-toggle,
+  #tos-userbar .tos-userbar-actions button#tos-switcheroo-toggle {
+    flex-basis: 42px;
+    min-width: 42px;
+    min-height: 38px;
+  }
+
+  #tos-userbar .tos-userbar-actions button#tos-theme-toggle small,
+  #tos-userbar .tos-userbar-actions button#tos-switcheroo-toggle small {
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================================
+   PALETA FINAL + SOPORTE DE TEMA
+   El JavaScript debe cambiar html[data-tos-theme="dark|light"].
+   ========================================================= */
+
+/* Unificar superficies, cuadros y separadores en modo oscuro */
+html[data-tos-theme="dark"] body,
+html[data-tos-theme="dark"] #wrap,
+html[data-tos-theme="dark"] #page-body,
+html[data-tos-theme="dark"] #main,
+html[data-tos-theme="dark"] #content,
+html[data-tos-theme="dark"] #container,
+html[data-tos-theme="dark"] #tos-dashboard,
+html[data-tos-theme="dark"] .tos-board,
+html[data-tos-theme="dark"] .tos-races {
+  background-color: var(--tos-black) !important;
+  color: var(--tos-rose) !important;
+}
+html[data-tos-theme="dark"] .tos-board .tos-forum-card,
+html[data-tos-theme="dark"] #tos-dashboard .tos-panel,
+html[data-tos-theme="dark"] #tos-dashboard .tos-notice,
+html[data-tos-theme="dark"] #tos-dashboard .tos-topic,
+html[data-tos-theme="dark"] #tos-dashboard .tos-shortcuts a,
+html[data-tos-theme="dark"] #tos-dashboard .tos-staff-member,
+html[data-tos-theme="dark"] #tos-dashboard .tos-poster,
+html[data-tos-theme="dark"] .tos-race,
+html[data-tos-theme="dark"] #tos-userbar,
+html[data-tos-theme="dark"] #tos-userbar .tos-userbar-inner {
+  background-color: var(--tos-black) !important;
+  color: var(--tos-rose) !important;
+  border-color: var(--tos-wine) !important;
+}
+html[data-tos-theme="dark"] .tos-board .tos-category-line,
+html[data-tos-theme="dark"] .tos-board .tos-category-heading::before,
+html[data-tos-theme="dark"] .tos-board .tos-category-heading::after,
+html[data-tos-theme="dark"] .tos-board .tos-forum-footer,
+html[data-tos-theme="dark"] #tos-dashboard .tos-panel-title,
+html[data-tos-theme="dark"] #tos-dashboard .tos-notice,
+html[data-tos-theme="dark"] #tos-dashboard .tos-topic,
+html[data-tos-theme="dark"] #tos-dashboard .tos-shortcuts a,
+html[data-tos-theme="dark"] #tos-dashboard .tos-staff-member,
+html[data-tos-theme="dark"] #tos-dashboard .tos-poster {
+  border-color: var(--tos-wine) !important;
+}
+html[data-tos-theme="dark"] .tos-board .tos-forum-title,
+html[data-tos-theme="dark"] .tos-board .tos-forum-title a,
+html[data-tos-theme="dark"] .tos-board .tos-category-title h2,
+html[data-tos-theme="dark"] .tos-board .tos-category-heading h2,
+html[data-tos-theme="dark"] #tos-dashboard .tos-panel-title,
+html[data-tos-theme="dark"] #tos-dashboard h2,
+html[data-tos-theme="dark"] #tos-dashboard h3,
+html[data-tos-theme="dark"] #tos-dashboard a,
+html[data-tos-theme="dark"] .tos-races-heading h2,
+html[data-tos-theme="dark"] .tos-race > span {
+  color: var(--tos-rose) !important;
+}
+html[data-tos-theme="dark"] #tos-userbar .tos-userbar-home,
+html[data-tos-theme="dark"] #tos-userbar .tos-userbar-welcome,
+html[data-tos-theme="dark"] #tos-userbar .tos-userbar-actions a,
+html[data-tos-theme="dark"] #tos-userbar .tos-userbar-actions button {
+  background: var(--tos-black) !important;
+  border-color: var(--tos-wine) !important;
+  color: var(--tos-rose) !important;
+}
+
+/* Tema claro: fondos rosados claros y tipografía negra */
+html[data-tos-theme="light"] body,
+html[data-tos-theme="light"] #wrap,
+html[data-tos-theme="light"] #page-body,
+html[data-tos-theme="light"] #main,
+html[data-tos-theme="light"] #content,
+html[data-tos-theme="light"] #container,
+html[data-tos-theme="light"] #tos-dashboard,
+html[data-tos-theme="light"] .tos-board,
+html[data-tos-theme="light"] .tos-races {
+  background-color: var(--tos-rose) !important;
+  color: var(--tos-black) !important;
+}
+html[data-tos-theme="light"] .tos-board .tos-forum-card,
+html[data-tos-theme="light"] #tos-dashboard .tos-panel,
+html[data-tos-theme="light"] #tos-dashboard .tos-notice,
+html[data-tos-theme="light"] #tos-dashboard .tos-topic,
+html[data-tos-theme="light"] #tos-dashboard .tos-shortcuts a,
+html[data-tos-theme="light"] #tos-dashboard .tos-staff-member,
+html[data-tos-theme="light"] #tos-dashboard .tos-poster,
+html[data-tos-theme="light"] .tos-race,
+html[data-tos-theme="light"] #tos-userbar,
+html[data-tos-theme="light"] #tos-userbar .tos-userbar-inner {
+  background-color: #fff8f6 !important;
+  color: var(--tos-black) !important;
+  border-color: var(--tos-taupe) !important;
+}
+html[data-tos-theme="light"] .tos-board .tos-category-line,
+html[data-tos-theme="light"] .tos-board .tos-category-heading::before,
+html[data-tos-theme="light"] .tos-board .tos-category-heading::after,
+html[data-tos-theme="light"] .tos-board .tos-forum-footer,
+html[data-tos-theme="light"] #tos-dashboard .tos-panel-title,
+html[data-tos-theme="light"] #tos-dashboard .tos-notice,
+html[data-tos-theme="light"] #tos-dashboard .tos-topic,
+html[data-tos-theme="light"] #tos-dashboard .tos-shortcuts a,
+html[data-tos-theme="light"] #tos-dashboard .tos-staff-member,
+html[data-tos-theme="light"] #tos-dashboard .tos-poster {
+  border-color: var(--tos-taupe) !important;
+}
+html[data-tos-theme="light"] .tos-board .tos-forum-title,
+html[data-tos-theme="light"] .tos-board .tos-forum-title a,
+html[data-tos-theme="light"] .tos-board .tos-category-title h2,
+html[data-tos-theme="light"] .tos-board .tos-category-heading h2,
+html[data-tos-theme="light"] #tos-dashboard .tos-panel-title,
+html[data-tos-theme="light"] #tos-dashboard h2,
+html[data-tos-theme="light"] #tos-dashboard h3,
+html[data-tos-theme="light"] #tos-dashboard a,
+html[data-tos-theme="light"] .tos-races-heading h2,
+html[data-tos-theme="light"] .tos-race > span {
+  color: var(--tos-wine) !important;
+}
+html[data-tos-theme="light"] #tos-dashboard .tos-topic-info span,
+html[data-tos-theme="light"] #tos-dashboard .tos-staff-member span,
+html[data-tos-theme="light"] #tos-dashboard .tos-poster span,
+html[data-tos-theme="light"] .tos-board .tos-forum-description,
+html[data-tos-theme="light"] .tos-board .tos-moderators,
+html[data-tos-theme="light"] .tos-board .tos-subforums {
+  color: var(--tos-taupe) !important;
+}
+html[data-tos-theme="light"] #tos-userbar .tos-userbar-home,
+html[data-tos-theme="light"] #tos-userbar .tos-userbar-welcome,
+html[data-tos-theme="light"] #tos-userbar .tos-userbar-actions a,
+html[data-tos-theme="light"] #tos-userbar .tos-userbar-actions button {
+  background: #fff8f6 !important;
+  border-color: var(--tos-taupe) !important;
+  color: var(--tos-black) !important;
+}
+
+/* Switcheroo: la visibilidad depende de esta clase en html> */
+html.tos-switcheroo-hidden #switcheroo {
+  display: none !important;
+}
+

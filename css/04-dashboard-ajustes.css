@@ -1,0 +1,401 @@
+/* Extraído del CSS original, manteniendo el orden de cascada. */
+/* =========================================================
+   THE OTHER SIDE — AJUSTE DE ANCHO Y PALETA DEL TABLERO
+   Pegar AL FINAL del CSS actual. No reemplazar el CSS completo.
+   Objetivo:
+   - recuperar el ancho completo disponible del foro;
+   - igualar el fondo de los paneles al de las tarjetas de foros;
+   - mantener bordes oscuros y acento borgoña discreto.
+   ========================================================= */
+
+/* El tablero ocupa todo el ancho del contenedor del foro */
+#tos-dashboard {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 22px 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  color: #e8e4e5 !important;
+  box-sizing: border-box !important;
+}
+
+/* =========================================================
+   THE OTHER SIDE — CORRECCIÓN DE COLORES DEL TABLERO
+   Pegar AL FINAL del CSS, debajo del ajuste de ancho anterior.
+   No borres el bloque que corrigió el ancho.
+   ========================================================= */
+
+#tos-dashboard {
+  background: transparent !important;
+  color: #e7e2e4 !important;
+}
+
+/* Superficies principales del tablero: carbón, como las tarjetas del foro */
+#tos-dashboard > *,
+#tos-dashboard section,
+#tos-dashboard article,
+#tos-dashboard .tos-panel,
+#tos-dashboard .tos-clock,
+#tos-dashboard .tos-announcements,
+#tos-dashboard .tos-latest,
+#tos-dashboard .tos-shortcuts,
+#tos-dashboard .tos-staff,
+#tos-dashboard .tos-top-poster {
+  background-color: #151518 !important;
+  border-color: #292629 !important;
+}
+
+/* Tarjetas internas */
+#tos-dashboard .tos-notice,
+#tos-dashboard .tos-topic,
+#tos-dashboard .tos-shortcuts a,
+#tos-dashboard .tos-staff-member,
+#tos-dashboard .tos-poster,
+#tos-dashboard .tos-topic-avatar,
+#tos-dashboard .tos-clock-inner {
+  background-color: #191719 !important;
+  border-color: #30282b !important;
+  box-shadow: none !important;
+}
+
+/* Cabeceras */
+#tos-dashboard .tos-panel-title,
+#tos-dashboard h2,
+#tos-dashboard h3 {
+  background-color: #191719 !important;
+  color: #d7c3c8 !important;
+  border-color: #30282b !important;
+}
+
+/* Enlaces, títulos y detalles en borgoña */
+#tos-dashboard a,
+#tos-dashboard .tos-notice-copy a,
+#tos-dashboard .tos-topic-info a {
+  color: #a52b43 !important;
+}
+
+#tos-dashboard a:hover {
+  color: #e0cbd0 !important;
+}
+
+#tos-dashboard .tos-topic-info span,
+#tos-dashboard .tos-staff-member span,
+#tos-dashboard .tos-poster span {
+  color: #b7aeb1 !important;
+}
+
+/* Atajos: texto claro y borde discreto */
+#tos-dashboard .tos-shortcuts a {
+  color: #d7c3c8 !important;
+  border: 1px solid #30282b !important;
+}
+
+#tos-dashboard .tos-shortcuts a:hover {
+  background-color: #242023 !important;
+  border-color: #792637 !important;
+  color: #ffffff !important;
+}
+
+/* Números del Top Poster */
+#tos-dashboard .tos-poster b {
+  color: #d7c3c8 !important;
+}
+
+/* Bordes de retratos */
+#tos-dashboard .tos-staff-member img,
+#tos-dashboard .tos-poster img {
+  border-color: #30282b !important;
+}
+
+/* Evita fondos grises heredados en elementos internos del tablero */
+#tos-dashboard [class*="tos-"] {
+  background-image: none;
+}
+
+@media (max-width: 650px) {
+  #tos-dashboard,
+  #tos-dashboard > * {
+    background-color: #151518 !important;
+  }
+}
+
+/* =========================================================
+   THE OTHER SIDE — CABECERA COMPACTA
+   Reduce el hueco bajo el banner sin alterar el tamaño del tablero.
+   ========================================================= */
+#page-header,
+#page-header .headerbar,
+#page-header #logo-desc,
+#page-header #site-description,
+#logo-desc,
+#site-description {
+  height: auto !important;
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#page-header {
+  margin-top: 0 !important;
+  padding-top: 6px !important;
+  line-height: normal !important;
+}
+
+#logo-desc {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+#logo-desc img,
+#site-description img,
+#logo img {
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+#main,
+#main-content,
+#content-container,
+#page-body {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+#tos-dashboard {
+  position: relative !important;
+  clear: both !important;
+  margin-top: 10px !important;
+}
+
+/* ========================================
+   THE OTHER SIDE — PANEL DE RAZAS
+   ======================================== */
+
+.tos-races {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 30px 0 24px;
+  padding: 22px;
+  background: #100e10;
+  border: 1px solid #573039;
+  box-shadow: inset 0 0 0 4px rgba(87, 48, 57, 0.12);
+}
+
+/* Título y líneas decorativas */
+
+.tos-races-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 0 0 22px;
+}
+
+.tos-races-heading span {
+  display: block;
+  width: min(18%, 180px);
+  height: 1px;
+  background: #573039;
+  position: relative;
+}
+
+.tos-races-heading span:first-child::after,
+.tos-races-heading span:last-child::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 7px;
+  height: 7px;
+  background: #9a4656;
+  transform: rotate(45deg);
+}
+
+.tos-races-heading span:first-child::after {
+  right: 0;
+}
+
+.tos-races-heading span:last-child::before {
+  left: 0;
+}
+
+.tos-races-heading h2 {
+  margin: 0;
+  padding: 0;
+  color: #e5d7d5;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 9px;
+  text-align: center;
+}
+
+/* Cuadrícula de tarjetas */
+
+.tos-races-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* Tarjetas individuales */
+
+.tos-race {
+  --race-color: #9a4656;
+
+  min-width: 0;
+  min-height: 142px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 8px 14px;
+  background: #151214;
+  border: 1px solid #35262b;
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.015);
+  color: #e4d9d8 !important;
+  text-decoration: none !important;
+  transition: background 0.25s ease,
+              border-color 0.25s ease,
+              transform 0.25s ease;
+}
+
+.tos-race img {
+  display: block;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: transform 0.25s ease,
+              opacity 0.25s ease;
+}
+
+.tos-race > span {
+  color: #e4d9d8;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 3px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.tos-race > i {
+  display: block;
+  width: 58%;
+  max-width: 100px;
+  height: 1px;
+  background: var(--race-color);
+  position: relative;
+}
+
+.tos-race > i::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  background: var(--race-color);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* Colores por raza */
+
+.race-vampiros {
+  --race-color: #B80000;
+}
+
+.race-licantropos {
+  --race-color: #3B41E8;
+}
+
+.race-hibridos {
+  --race-color: #26C97D;
+}
+
+.race-brujos {
+  --race-color: #C2A200;
+}
+
+.race-cazadores {
+  --race-color: #D17000;
+}
+
+.race-humanos {
+  --race-color: #E7C9E9;
+}
+
+.race-angeles {
+  --race-color: #5FCBF2;
+}
+
+.race-caidos {
+  --race-color: #A93DA5;
+}
+
+/* Efecto al pasar el cursor */
+
+.tos-race:hover {
+  background: #20171b;
+  border-color: var(--race-color);
+  transform: translateY(-2px);
+}
+
+.tos-race:hover img {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* Adaptación a pantallas medianas */
+
+@media (max-width: 900px) {
+  .tos-races-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .tos-race {
+    min-height: 125px;
+    padding: 14px 5px 12px;
+  }
+
+  .tos-race img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .tos-race > span {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+}
+
+/* Adaptación a móviles */
+
+@media (max-width: 560px) {
+  .tos-races {
+    padding: 14px;
+  }
+
+  .tos-races-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .tos-races-heading {
+    gap: 12px;
+  }
+
+  .tos-races-heading h2 {
+    font-size: 17px;
+    letter-spacing: 6px;
+  }
+
+  .tos-race {
+    min-height: 118px;
+  }
+}
+

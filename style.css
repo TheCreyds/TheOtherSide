@@ -1,0 +1,6 @@
+/* THE OTHER SIDE — cargador principal. Mantener este archivo en la raíz del repositorio. */
+@import url("./css/01-base-cabecera-foros.css");
+@import url("./css/02-barra-switcheroo.css");
+@import url("./css/03-dashboard-widgets.css");
+@import url("./css/04-dashboard-ajustes.css");
+@import url("./css/05-ajustes-finales-responsive.css");
