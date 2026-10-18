@@ -504,3 +504,22 @@ html.tos-switcheroo-hidden #switcheroo {
     padding: 4px 5px !important;
   }
 }
+/* THE OTHER SIDE — FONDO GLOBAL FIJO */
+html[data-tos-theme="dark"] body {
+  background-color: #050505 !important;
+  background-image: url("https://i.imgur.com/5Sn6oCZ.jpeg") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+/* CAPA OSCURA SEMITRANSPARENTE */
+html[data-tos-theme="dark"] #wrap,
+html[data-tos-theme="dark"] #page-body,
+html[data-tos-theme="dark"] #main,
+html[data-tos-theme="dark"] #content,
+html[data-tos-theme="dark"] #container {
+  background-color: rgba(3, 3, 3, 0.48) !important;
+  background-image: none !important;
+}
