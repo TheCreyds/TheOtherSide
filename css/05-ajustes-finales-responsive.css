@@ -439,3 +439,68 @@ html.tos-switcheroo-hidden #switcheroo {
   display: none !important;
 }
 
+
+/* THE OTHER SIDE — SUBFOROS: PEQUEÑOS, VISIBLES Y ALINEADOS A LA DERECHA */
+
+.tos-board .tos-subforums,
+.tos-board .tos-forum-card .tos-forum-links {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 0 !important;
+  margin: 4px 0 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.tos-board .tos-forum-card .tos-forum-links a,
+.tos-board .tos-forum-card .tos-forum-links a.gensmall,
+.tos-board .tos-forum-card .tos-forum-links a.forumtitle,
+.tos-board .tos-forum-card .tos-subforums a {
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 3px !important;
+  margin: 0 !important;
+  padding: 4px 7px !important;
+  background: #151214 !important;
+  border: 1px solid #573039 !important;
+  border-radius: 0 !important;
+  color: #FFE4DE !important;
+  font-family: "Segoe UI", sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.4px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+}
+
+.tos-board .tos-forum-card .tos-forum-links a::before,
+.tos-board .tos-forum-card .tos-subforums a::before {
+  color: #C9A7AC !important;
+  font-size: 11px !important;
+}
+
+.tos-board .tos-forum-card .tos-forum-links a:hover,
+.tos-board .tos-forum-card .tos-subforums a:hover {
+  background: #3D1111 !important;
+  border-color: #C9A7AC !important;
+  color: #FFFFFF !important;
+}
+
+@media (max-width: 600px) {
+  .tos-board .tos-subforums,
+  .tos-board .tos-forum-card .tos-forum-links {
+    justify-content: flex-start !important;
+  }
+
+  .tos-board .tos-forum-card .tos-forum-links a,
+  .tos-board .tos-forum-card .tos-subforums a {
+    font-size: 8px !important;
+    padding: 4px 5px !important;
+  }
+}
